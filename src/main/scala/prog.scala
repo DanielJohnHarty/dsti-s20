@@ -38,7 +38,7 @@ object App {
     }
 
     def processFile(data: List[String]) = {
-        print(data(1))
+        println(data(1))
     }
 
     /**
@@ -77,6 +77,7 @@ object App {
     def main(args: Array[String]) = {
         val data = readFile("/home/jlcanela/dev/dsti-s20/BADFILE1.txt")
         validateFile(data)
+        println("file is validated")
         processFile(data)
     }
 
