@@ -20,3 +20,21 @@ Run as a standard java process
 ```
 java -cp /home/jlcanela/.sbt/boot/scala-2.12.10/lib/scala-library.jar:target/scala-2.12/dsti-s20_2.12-0.1.0-SNAPSHOT.jar App
 ```
+
+# How to test
+
+```
+sbt test
+```
+
+# How to develop
+
+```
+sbt ~test
+```
+
+update the test : see them fail
+update the code and verify the test are working fine
+
+
+
