@@ -3,11 +3,6 @@ import org.scalatest._
 import flatspec._
 import matchers._
 
-object Header {
-
-    def toPascalCase(header: String) = header
-
-}
 
 class ExampleSpec extends AnyFlatSpec with should.Matchers {
 
@@ -21,6 +16,11 @@ class ExampleSpec extends AnyFlatSpec with should.Matchers {
     Header.toPascalCase("HPCP") should be("Hpcp")
     Header.toPascalCase("Measurement Flag") should be("MeasurementFlag")
     Header.toPascalCase("Quality Flag") should be("QualityFlag")
+  }
+
+  "Headers" should "convert to PascalCase" in {
+    Header
+    .headersToPascalCase("STATION,STATION_NAME,ELEVATION,LATITUDE,LONGITUDE,DATE,HPCP,Measurement Flag,Quality Flag") should be ("Station,StationName,Elevation,Latitude,Longitude,Date,Hpcp,MeasurementFlag,QualityFlag")
   }
 
 }
